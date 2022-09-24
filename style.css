@@ -11,6 +11,7 @@ body {
   align-items: center;
   background-color: hsl(217, 54%, 11%);
   min-height: 100vh;
+  font-family: "Outfit", sans-serif;
 }
 
 .body {
@@ -25,28 +26,73 @@ body {
   border-radius: 1rem;
   box-shadow: 2px 20px 0px 20px hsla(216, 66%, 8%, 0.494);
 }
-
+@media (max-width: 23.75rem) {
+  .body {
+    width: 14rem;
+  }
+}
 .equiLImg {
   width: 18rem;
   height: 18rem;
   border-radius: 0.5rem;
+  cursor: pointer;
+  background: url(images/image-equilibrium.jpg);
+  background-size: contain;
 }
+
+.equiLImg:hover {
+  background: linear-gradient(
+      hsla(178, 100%, 50%, 0.501),
+      hsla(178, 100%, 50%, 0.492)
+    ),
+    url(images/image-equilibrium.jpg);
+  opacity: 3;
+  background-size: contain;
+  transition: all 5s;
+}
+@media (max-width: 23.75rem) {
+  .equiLImg {
+    height: 14rem;
+    width: 14rem;
+  }
+}
+
 .title {
   color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.title:hover {
+  color: hsl(178, 100%, 50%);
 }
 .para {
   color: hsl(215, 51%, 70%);
   font-size: 1.1rem;
+  font-weight: 300;
 }
 .eth {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  font-weight: 700;
+}
+.eye {
+  display: none;
+  position: absolute;
+  top: 0rem;
 }
 
+.equiLImg:hover ~ .eye {
+  display: flex;
+  justify-content: center;
+  left: 9rem;
+  top: 8.5rem;
+}
 h6 {
   color: hsl(178, 100%, 50%);
+  font-size: 1rem;
+  font-weight: 700;
 }
 .details {
   display: flex;
@@ -59,6 +105,7 @@ h6 {
   display: flex;
   gap: 0.3rem;
   align-items: center;
+  font-weight: 300;
 }
 .clock {
   width: 1rem;
@@ -79,11 +126,16 @@ hr {
 }
 
 h3 {
-  color: hsl(0, 0%, 100%);
-  font-size: 1rem;
-}
-.Pcolor {
   color: hsl(215, 51%, 70%);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.gcolor {
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+.gcolor:hover {
+  color: hsl(178, 100%, 50%);
 }
 
 .avatar {

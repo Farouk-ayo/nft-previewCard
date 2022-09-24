@@ -83,7 +83,7 @@ body {
   top: 0rem;
 }
 
-.equiLImg:hover ~ .eye {
+.equiLImg:hover .eye {
   display: flex;
   justify-content: center;
   left: 9rem;
